@@ -22,7 +22,7 @@ public class WebSocketConfiguration implements WebSocketConfigurer {
 	@Override
 	public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
 		registry.addHandler(communication , "/game").setAllowedOrigins("*");
-		registry.addHandler(roomHandler , "/test/{room}")
+		registry.addHandler(roomHandler , "/rooms/{room}")
 				.setAllowedOrigins("*");
 	}
 	

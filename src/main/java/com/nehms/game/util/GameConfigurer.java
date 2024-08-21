@@ -1,7 +1,7 @@
 package com.nehms.game.util;
 
-import com.nehms.game.entites.Card;
-import com.nehms.game.entites.Player;
+import com.nehms.game.model.Card;
+import com.nehms.game.model.Player;
 import com.nehms.game.valueobjets.Pattern;
 import org.springframework.stereotype.Component;
 

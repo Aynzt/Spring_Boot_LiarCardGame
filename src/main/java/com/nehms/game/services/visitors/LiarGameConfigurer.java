@@ -1,8 +1,8 @@
 package com.nehms.game.services.visitors;
 
-import com.nehms.game.entites.Card;
-import com.nehms.game.entites.GameSession;
-import com.nehms.game.entites.Player;
+import com.nehms.game.model.Card;
+import com.nehms.game.model.GameSession;
+import com.nehms.game.model.Player;
 import com.nehms.game.valueobjets.Pattern;
 import org.springframework.stereotype.Component;
 

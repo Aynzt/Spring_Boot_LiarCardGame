@@ -3,9 +3,9 @@ package com.nehms.game.services;
 import java.io.IOException;
 import java.util.List;
 
-import com.nehms.game.entites.GameSession;
-import com.nehms.game.entites.Room;
-import com.nehms.game.entites.SocketManager;
+import com.nehms.game.model.GameSession;
+import com.nehms.game.model.Room;
+import com.nehms.game.model.SocketManager;
 import com.nehms.game.exceptions.GameSessionNullException;
 import com.nehms.game.util.Broadcaster;
 import com.nehms.game.util.Converter;
@@ -35,7 +35,7 @@ public interface Orchestrator {
 			message.setType("CARD");
 
 			if (gameSession.getPlayers().get(i).getHand().isEmpty()) {
-				String winnerMessage = "Le gagnant du jeu est " + gameSession.getPlayers().get(i).getNamePlayer() + " 🎉🎉🎉🎉🎉";
+				String winnerMessage = "Le gagnant du jeu est " + gameSession.getPlayers().get(i).getName() + " 🎉🎉🎉🎉🎉";
 				message.setBody(winnerMessage);
 				message.setType("gagnant");
 				broadcaster.broadcastMessage(jsonConverter.convert(message), gameSession.getSocketSessions());

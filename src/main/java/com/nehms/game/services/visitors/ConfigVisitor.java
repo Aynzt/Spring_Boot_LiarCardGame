@@ -1,6 +1,6 @@
 package com.nehms.game.services.visitors;
 
-import com.nehms.game.entites.GameSession;
+import com.nehms.game.model.GameSession;
 
 public interface ConfigVisitor {
 

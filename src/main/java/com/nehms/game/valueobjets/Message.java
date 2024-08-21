@@ -2,7 +2,7 @@ package com.nehms.game.valueobjets;
 
 import java.util.List;
 
-import com.nehms.game.entites.Card;
+import com.nehms.game.model.Card;
 import org.springframework.web.socket.WebSocketSession;
 
 import lombok.AllArgsConstructor;

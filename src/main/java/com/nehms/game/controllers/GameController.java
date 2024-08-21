@@ -1,6 +1,6 @@
 package com.nehms.game.controllers;
 
-import com.nehms.game.entites.SocketManager;
+import com.nehms.game.model.SocketManager;
 import com.nehms.game.exceptions.GameSessionNullException;
 import com.nehms.game.services.Orchestrator;
 import lombok.Getter;

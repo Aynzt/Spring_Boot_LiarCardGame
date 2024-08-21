@@ -1,9 +1,9 @@
 package com.nehms.game.services;
 
-import com.nehms.game.entites.GameSession;
-import com.nehms.game.entites.Player;
-import com.nehms.game.entites.Room;
-import com.nehms.game.entites.SocketManager;
+import com.nehms.game.model.GameSession;
+import com.nehms.game.model.Player;
+import com.nehms.game.model.Room;
+import com.nehms.game.model.SocketManager;
 import com.nehms.game.util.Broadcaster;
 import com.nehms.game.util.Converter;
 import com.nehms.game.util.SimpleBroadcaster;
@@ -76,7 +76,7 @@ public class ProcessJoinRoom implements Orchestrator {
             gameSession.getSocketSessions().add(gameSession.getCurrentSession());
 
             objectResponse.setBody("Bienvenue "
-                    + gameSession.getPlayers().get(gameSession.getSocketSessions().size() - 1).getNamePlayer());
+                    + gameSession.getPlayers().get(gameSession.getSocketSessions().size() - 1).getName());
 
             objectResponse.setType("creation de joueur");
 

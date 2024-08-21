@@ -1,7 +1,7 @@
 package com.nehms.game.services;
 
-import com.nehms.game.entites.GameSession;
-import com.nehms.game.entites.SocketManager;
+import com.nehms.game.model.GameSession;
+import com.nehms.game.model.SocketManager;
 import com.nehms.game.services.visitors.ConfigVisitor;
 import com.nehms.game.util.Broadcaster;
 import com.nehms.game.util.Converter;

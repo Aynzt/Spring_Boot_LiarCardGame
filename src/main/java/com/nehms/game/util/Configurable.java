@@ -2,8 +2,8 @@ package com.nehms.game.util;
 
 import java.util.List;
 
-import com.nehms.game.entites.Card;
-import com.nehms.game.entites.Player;
+import com.nehms.game.model.Card;
+import com.nehms.game.model.Player;
 
 public interface Configurable {
 

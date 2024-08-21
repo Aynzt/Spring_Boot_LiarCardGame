@@ -1,9 +1,9 @@
 package com.nehms.game.services;
 
-import com.nehms.game.entites.Card;
-import com.nehms.game.entites.GameSession;
-import com.nehms.game.entites.Player;
-import com.nehms.game.entites.SocketManager;
+import com.nehms.game.model.Card;
+import com.nehms.game.model.GameSession;
+import com.nehms.game.model.Player;
+import com.nehms.game.model.SocketManager;
 import com.nehms.game.exceptions.GameSessionNullException;
 import com.nehms.game.util.Broadcaster;
 import com.nehms.game.util.Converter;
@@ -180,7 +180,7 @@ public class ProcessContestation implements Orchestrator {
             contestPlayer.getHand().addAll(cardsPlayed);
             cardsPlayed.clear();
 
-            message.setBody("Le joueur " + contestPlayer.getNamePlayer() + " prend les cartes 😂😂😂");
+            message.setBody("Le joueur " + contestPlayer.getName() + " prend les cartes 😂😂😂");
             message.setType("prend les cartes");
 
             broadcaster.broadcastMessage(jsonConverter.convert(message), list);
@@ -188,7 +188,7 @@ public class ProcessContestation implements Orchestrator {
             player.getHand().addAll(cardsPlayed);
             cardsPlayed.clear();
 
-            message.setBody("Le joueur " + player.getNamePlayer() + " prend les cartes 😂😂😂");
+            message.setBody("Le joueur " + player.getName() + " prend les cartes 😂😂😂");
             message.setType("prend les cartes");
 
             broadcaster.broadcastMessage(jsonConverter.convert(message), list);

@@ -1,4 +1,4 @@
-package com.nehms.game.entites;
+package com.nehms.game.model;
 
 import com.nehms.game.services.visitors.ConfigVisitor;
 import com.nehms.game.valueobjets.GameStep;
@@ -10,7 +10,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.socket.WebSocketSession;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Getter

@@ -1,9 +1,9 @@
 package com.nehms.game.services;
 
-import com.nehms.game.entites.Card;
-import com.nehms.game.entites.GameSession;
-import com.nehms.game.entites.Player;
-import com.nehms.game.entites.SocketManager;
+import com.nehms.game.model.Card;
+import com.nehms.game.model.GameSession;
+import com.nehms.game.model.Player;
+import com.nehms.game.model.SocketManager;
 import com.nehms.game.util.Broadcaster;
 import com.nehms.game.util.Converter;
 import com.nehms.game.util.Processor;
@@ -133,7 +133,7 @@ public class ProcessPlayCard implements Orchestrator {
 
         message.setType("actuellement le tour");
         message.setBody("c'est actuellement le tour du " + gameSession.getPlayers()
-                .get(gameSession.getCurrentIndexOfSessionCard()).getNamePlayer());
+                .get(gameSession.getCurrentIndexOfSessionCard()).getName());
 
 
         broadcaster.broadcastMessage(jsonConverter.convert(message), gameSession.getSocketSessions());

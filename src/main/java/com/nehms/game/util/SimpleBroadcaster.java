@@ -8,8 +8,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 
-import com.nehms.game.entites.Card;
-
 @Component
 @Slf4j
 public final class SimpleBroadcaster implements Broadcaster {

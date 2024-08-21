@@ -1,4 +1,4 @@
-package com.nehms.game.entites;
+package com.nehms.game.model;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -10,7 +10,7 @@ import java.util.List;
 @Getter
 @Setter
 public class SocketManager {
-	
+
 	private List<Room> socketRooms;
 	private int currentRoomIndex;
 	private WebSocketSession currentSession;

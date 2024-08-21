@@ -1,8 +1,8 @@
 package com.nehms.game.socket;
 
 import com.nehms.game.controllers.GameController;
-import com.nehms.game.entites.Player;
-import com.nehms.game.entites.Room;
+import com.nehms.game.model.Player;
+import com.nehms.game.model.Room;
 import com.nehms.game.util.Broadcaster;
 import com.nehms.game.util.Converter;
 import com.nehms.game.valueobjets.Message;
@@ -53,7 +53,7 @@ public class Communication extends TextWebSocketHandler {
 						}
 					}
 
-					message.setBody("Le joueur " + room.getGameSession().getPlayers().get(indexofTheLeavePlayer).getNamePlayer()
+					message.setBody("Le joueur " + room.getGameSession().getPlayers().get(indexofTheLeavePlayer).getName()
 							+ " a quitter le jeu 😭😭");
 
 					room.getGameSession().getSocketSessions().remove(session);
@@ -68,7 +68,7 @@ public class Communication extends TextWebSocketHandler {
 
 					int i = 1;
 					for (Player player : players) {
-						player.setNamePlayer("Player " + i);
+						player.setName("Player " + i);
 						
 						i++;
 					}
@@ -86,8 +86,8 @@ public class Communication extends TextWebSocketHandler {
 					message2.setType("changement d'identifiant");
 
 					for (int j = 0; j < room.getGameSession().getSocketSessions().size(); j++) {
-						message2.setNamePlayer(players.get(j).getNamePlayer());
-						message2.setBody("votre nouvelle identifiant est : " + players.get(j).getNamePlayer());
+						message2.setNamePlayer(players.get(j).getName());
+						message2.setBody("votre nouvelle identifiant est : " + players.get(j).getName());
 						room.getGameSession().getSocketSessions().get(j)
 								.sendMessage(new TextMessage(jsonConverter.convert(message2)));
 					}
